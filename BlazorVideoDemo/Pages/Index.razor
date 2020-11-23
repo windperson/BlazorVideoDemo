@@ -4,11 +4,18 @@
 @using Blazored.Video.Support
 
 <h1>Demo Video Control</h1>
+<p>Using <a href="https://github.com/Blazored/Video" target="_blank">Blazored Video</a> to present HTML5 <a href="https://www.quackit.com/html_5/tags/html_video_tag.cfm" target="_blank">&lt;video&gt; tag</a> in Blazor</p>
 
 <div>
-    <BlazoredVideo
-        class="w-100"
-        controls="controls">
-        <source src="video/video01.mp4" type="video/mp4" />
+    <BlazoredVideo autoplay="autoplay" preload="auto" controls="controls" Play="OnPlay" class="w-100">
+        <source src="video/bbb_sunflower_1080p_60fps_normal.mp4" type="video/mp4" />
+        Your browser is not support &lt;video&gt; tag.
     </BlazoredVideo>
 </div>
+
+@code{
+    private void OnPlay(VideoState state)
+    {
+        
+    }
+}
